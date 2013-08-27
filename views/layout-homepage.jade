@@ -1,0 +1,69 @@
+doctype 5
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title= title
+    meta(name='description', content='')
+    meta(name='author', content='Chris Da Sie | Freelance Web Designer | http://chrisdasie.com')
+    
+    meta(name='HandheldFriendly', content='True')
+    meta(name='MobileOptimized', content='320')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/superslides.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='//use.typekit.net/wyu5eyr.js')
+    script try{Typekit.load();}catch(e){}
+
+    script(src='javascripts/vendor/modernizr.js')
+
+  //if (lt IE 9) & (!IEMobile)
+      script(src='javascripts/vendor/selectivizr-min.js')    
+
+    meta(http-equiv='cleartype', content='on')
+  body.homepage
+    header.header_nav(role="banner")
+      div.cbp-af-inner
+        h1.logo
+          a(href="/") Infinitus Marketing &amp; Technology
+        nav#nav(role='navigation')
+          ul
+            li
+              a(href="/company") Company
+            li
+              a(href="/work") Services
+            li
+              a(href="/blog") Thoughts
+            li
+              a(href="/contact") Hire Us
+    block content
+    footer.dark
+      div.container
+        div
+          a.twitter Follow Us On Twitter
+          a.facebook Like Us On Facebook
+      div.darker
+        div.container
+          p.small
+            i Lovingly crafted in Newfoundland
+          p.copyright &copy;2013 Infinitus Marketing &amp; Technology
+          ul
+            li
+              a(href="/accessibility") Accessibility
+            li
+              a(href="/styleguide") Style Guide
+            li
+              a(href="/jobs") Jobs
+          
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    script.
+      window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.9.1.min.js"><\\/script>')
+    script(src='javascripts/plugins.js')
+    script(src='javascripts/vendor/jquery.easing.1.3.js')
+    script(src='javascripts/vendor/jquery.nav.js')
+    script(src='javascripts/vendor/jquery.animate-enhanced.min.js')
+    script(src='javascripts/vendor/hammer.min.js')
+    script(src='javascripts/vendor/jquery.superslides.min.js')
+    script(src='javascripts/script.js')
+    script(src='javascripts/helper.js')

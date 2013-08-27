@@ -1,0 +1,15 @@
+extends layout
+ 
+block content
+  main.main(role='main')
+    .container
+      aside
+        ul.nav-sub
+          li
+            a(href='/company') Company
+          li
+            a(href='/team') Team
+          li
+            a(href='/jobs') Jobs
+          li.current-page
+            a(href='/contact') Contact

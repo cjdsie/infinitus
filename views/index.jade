@@ -1,0 +1,51 @@
+extends layout-homepage
+
+block content
+  #slides
+    ul.slides-container
+        li
+          img(src='images/grandfallswindsor.jpg', alt='Hiking Trail in Grand Falls - Windsor')
+          .slidecaption
+            h1 Town’s Best Foot Forward
+            h3 New town of Grand Falls - Windsor’s website attracts tourism, residents and business
+            p
+              a(href="") Discover More
+        li
+          img(src='images/marble.jpg', alt='Marble Mountain Ski Lift')
+          .slidecaption
+            h1 Big Ideas for Big Results
+            h3 Online presence to match Marble Mountain Ski Resort’s ambitious business goals.
+            p
+              a(href="") Discover More 
+        li
+          img(src='images/cinelli-front.jpeg', alt='')
+          .slidecaption
+            h1 Award Winning Work
+            p
+              a(href="/work") Discover More
+    .slides-navigation
+      a.next(href='#')
+        img(src='images/arrow-right.png')
+      a.prev(href='#')
+        img(src='images/arrow-left.png')
+  main.content(role="main")
+    div.container
+      section.featuredPages
+        div.one-third
+          h3 Who We Are
+          p 
+            | We’re an interactive marketing agency. 
+            b INFINITUS 
+            | means limitless in Latin. In today’s world, change is inevitable. When you team with online marketing experts who are on the forefront of this change, your potential for growth is limitless.
+        div.one-third
+          h3 What We Do
+          p We’ll transform your online marketing so you become a market leader. We don’t just design and build websites; we create powerful online strategies and integrated digital campaigns.
+        div.one-third
+          h3 Our Work
+          p We call many of our clients friends and are honored to contribute to their success. Will you be our next success story?
+      section.latestblogs
+        h2 The Latest From The Blog
+        - var posts = getPosts(0,5)
+        - var page  = 3
+        - each post in posts
+          include includes/postSnippet

@@ -1,0 +1,126 @@
+body {
+  width: 100%;
+  *zoom: 1;
+}
+body:before,
+body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+#slides {
+  position: relative;
+}
+#slides .slides-container {
+  display: none;
+}
+#slides .scrollable {
+  *zoom: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+}
+#slides .scrollable:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.slides-navigation {
+  margin: 0 auto;
+  position: absolute;
+  z-index: 3;
+  top: 46%;
+  width: 100%;
+}
+.slides-navigation a {
+  position: absolute;
+  display: block;
+  color: #fff;
+}
+.slides-navigation a.prev {
+  left: 0;
+}
+.slides-navigation a.next {
+  right: 0;
+}
+.slidecaption {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  left: 90px;
+  top: 33%;
+  padding: 10px 20px;
+  color: #111;
+}
+.slidecaption h1 {
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 3em;
+  line-height: 1;
+  margin: 0;
+  text-shadow: 0 0px 20px rgba(0,0,0,0.2);
+}
+.slidecaption h3 {
+  font-family: "chaparral-pro", sans-serif;
+  font-weight: 500;
+  text-transform: none;
+  color: #edece4;
+  text-shadow: 0 0px 20px rgba(0,0,0,0.2);
+}
+.slidecaption p {
+  margin-top: 6%;
+}
+.slidecaption a {
+  position: relative;
+  width: auto;
+  color: #fff;
+  background: #222;
+  background-color: rgba(0,0,0,0.3);
+  border: 2px solid #fff;
+  border-radius: 3px;
+  padding: 2% 5%;
+  font-family: "brandon-grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 0.75em;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.slidecaption a:hover {
+  color: #fff;
+  border: 2px solid #db612e;
+  background-color: rgba(0,0,0,0.6);
+}
+.slides-pagination {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+.slides-pagination a {
+  border: 2px solid #222;
+  border-radius: 15px;
+  width: 10px;
+  height: 10px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin: 2px;
+  overflow: hidden;
+  text-indent: -100%;
+}
+.slides-pagination a.current {
+  background: #222;
+}

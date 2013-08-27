@@ -1,0 +1,98 @@
+$font = "chaparral-pro",sans-serif;
+$headline-font = "brandon-grotesque",sans-serif;
+
+$green = #9fbb58
+$light-orange = #e46a3f
+$darkorange = #db612e
+$darkgrey = #5d6266
+$darkergrey = #222222
+$footergrey = #363839
+$white = #fff
+$offwhite = #edece4
+
+$basefont = 16
+$baseh1 = 110
+$baseh2 = 42
+$baseh3 = 26
+$baseh4 = basefont
+$baseh5 = 14
+$baseh6 = 12
+
+$light = 100
+$regular = 300
+$semi-bold = 400
+$heavy = 700
+$black = 900
+
+
+em(target, context = $basefont)
+  (target / context) * 1em
+
+pagebackground()
+  background -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f1f4f5), color-stop(100%, #ffffff))
+  background -webkit-linear-gradient(#f1f4f5,#ffffff)
+  background -moz-linear-gradient(#f1f4f5,#ffffff)
+  background -o-linear-gradient(#f1f4f5,#ffffff)
+  background linear-gradient(#f1f4f5,#ffffff)
+
+/////////////////
+// Semantic.gs // for Stylus: http://learnboost.github.com/stylus/
+/////////////////
+
+// Defaults which you can freely override
+column-width = 60px
+gutter-width = 20px
+columns = 12
+
+
+// Utility variable — you should never need to modify this
+_gridsystem-width = (column-width + gutter-width) * columns
+
+// Set @total-width to 100% for a fluid layout
+total-width = 100%
+
+// Correcting percentage-to-pixel rounding errors in IE6 & 7
+// See http://tylertate.com/blog/2012/01/05/subpixel-rounding.html
+// Override @min with the minimum width of your layout
+min-width = 960
+correction = (((0.5 / min-width) * 100) * 1%)
+
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+clearfix()
+ *zoom:1
+
+	&:before,
+	&:after
+		content:""
+		display:table
+
+	&:after
+		clear:both
+
+
+//////////
+// GRID //
+//////////
+
+body
+	width 100%
+	clearfix()
+
+row(columns = columns)
+	display block
+	width total-width * ((gutter-width + _gridsystem-width ) / _gridsystem-width)
+	margin 0 total-width * (((gutter-width * 0.5) / _gridsystem-width ) * - 1)
+	*width total-width * ((gutter-width + _gridsystem-width ) / _gridsystem-width)-correction
+	*margin 0 total-width * (((gutter-width * 0.5) / _gridsystem-width ) * - 1)-correction
+
+column(x, columns = columns)
+	display inline
+	float left
+	overflow hidden
+	width total-width * ((((gutter-width + column-width ) * x) - gutter-width) / _gridsystem-width)
+	margin 0 total-width * ( (gutter-width * 0.5) / _gridsystem-width)
+	*width total-width * ((((gutter-width + column-width ) * x) - gutter-width) / _gridsystem-width)-correction
+	*margin 0 total-width * ( (gutter-width * 0.5) / _gridsystem-width)-correction
+
+offset(offset = 1)
+	margin-left total-width*(((gutter-width+column-width)*offset + (gutter-width*0.5))/_gridsystem-width)
