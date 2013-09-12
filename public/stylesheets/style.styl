@@ -324,12 +324,21 @@ p.leader
     h3
       text-align left
       color $green
+   a
+     &:after
+       content '\2192'
+       margin-left .5em
+       font-weight $heavy
+     
 
 /* Homepage Blog Callouts */
 
 .latestblogs
   clearfix()
   row(12)
+  margin-bottom 3%
+  h2
+    margin-bottom 3%
   .post
     column (12)
     @media (min-width: 30em)
@@ -347,6 +356,9 @@ p.leader
       width 100%
       margin 0
       padding 0
+      a
+        text-transform capitalize
+
 
 /* COMPANY | TEAM | JOBS | CONTACT */
 
@@ -398,7 +410,6 @@ section
      color $darkorange
      font-weight $heavy
   a
-    text-decoration underline
     text-transform none
   article
     margin-top 8%
@@ -442,6 +453,10 @@ section
 footer
   padding-top 0%
   background-color $footergrey
+  .social
+    column(12)
+    clearfix()
+    margin 0
   a
     color $offwhite
     font-family $headline-font
@@ -449,13 +464,102 @@ footer
       float left
       font-size .75em
       width 25%
+      span
+        width 18px
+        height 18px
+        overflow hidden
+        display inline-block 
+        position relative
+        top 3px
+        margin-right .5em
     &.facebook
       float right
       font-size .75em
       width 25%
       text-align right
+      span
+         width 18px
+         height 18px
+         overflow hidden
+         display inline-block 
+         position relative
+         top 3px
+         margin-left .5em
   p
     color $offwhite
+  .form
+    row(12)
+    clearfix()
+    margin 6% 0
+    form.mailinglist
+      column(4)
+      background $white
+      padding 25px 30px
+      border-radius 8px
+      -moz-border-radius 8px
+      -webkit-border-radius 8px
+      margin 0
+      label
+        display block
+        margin-bottom 0.3em
+        font-weight normal
+	  input
+	    &[type='email']
+          background #fafafa
+          border 1px solid #d9d9d9
+          border-radius 3px
+          -moz-border-radius 3px
+          -webkit-border-radius 3px
+          -webkit-box-shadow inset 1px 1px 5px 2px #f4f4f4
+          -moz-box-shadow inset 1px 1px 5px 2px #f4f4f4
+          box-shadow inset 1px 1px 5px 2px #f4f4f4
+          padding 4px
+          width 77%
+          margin-right 2%
+          position relative
+          top -1px
+	    &[type='submit']
+	      border none
+	      border-radius 3px
+	      -moz-border-radius 3px
+	      -webkit-border-radius 3px
+	      font-family inherit
+	      font-weight 700
+	      font-style normal
+	      font-size 1em
+	      color #202020
+	      cursor pointer
+	      padding: 5px 0
+	      text-indent -9999px
+	      background $light-orange url('/images/send.png') no-repeat center center
+	      width 18%
+	      &:hover
+	        background-color $darkorange
+  .startproject
+    column(6)
+    offset(1.5)
+    .startintro
+      column(7.5)
+    .contactlist
+      column(4.5)	
+      ul
+        list-style none
+        margin 0
+        font-size em(12)
+        li
+          margin 6% 0
+          &:first-child
+            margin-top 0
+          a
+            text-transform none
+          img
+            width 18px
+            height 18px
+            overflow hidden
+            display inline-block 
+            position relative
+            top 3px
+            margin-right .5em
   .darker
     background-color $darkergrey
     font-size .75em

@@ -40,9 +40,37 @@ html
     block content
     footer.dark
       div.container
-        div
-          a.twitter Follow Us On Twitter
-          a.facebook Like Us On Facebook
+        .social
+          a.twitter 
+            span
+              img(src='/images/twitter.png')
+            | Follow Us On Twitter
+          a.facebook 
+            | Like Us On Facebook
+            span
+              img(src='/images/facebook.png')
+        .form
+          form.mailinglist(action='http://essentialcodinginc.createsend.com/t/y/s/cidhjt/', method='post')
+            h4
+              label(for='fieldEmail') Subscribe to our newsletter
+            input#fieldEmail(name='cm-cidhjt-cidhjt', type='email', required='required')
+            input(type='submit') Subscribe
+          .startproject
+            .startintro
+              h4 Ready to start a project with us
+              p
+                | Got a creative communication problem that you need help solving? We’d love to chat about it.
+            .contactlist
+              ul
+                li 
+                  img(src='/images/cell.png') 
+                  a(href="tel:+1(888) 369-1688") +1.888.369.1688
+                li
+                  img(src='/images/twitter.png')  
+                  a(href="http://twitter.com/goinfinitus") @goinfinitus
+                li
+                   img(src='/images/email.png')  
+                   a(href="mailto:scott@goinfinitus.com") scott@goinfinitus.com
       div.darker
         div.container
           p.small
