@@ -3,18 +3,8 @@ extends layout
 block content
   main.main(role='main')
     .container
-      aside
-        ul.nav-sub
-          li
-            a(href='/company') Company
-          li.current-page
-            a(href='/team') Team
-          li
-            a(href='/jobs') Jobs
-          li
-            a(href='/contact') Contact
-
-      section 
+      section
+        h2 A hand-picked Team
         p.leader.center Our promise to create limitless results isn’t just our name – it’s integrated into how we approach every project. 
         p Digital marketing is complex. To build our team, we knew we couldn’t be constrained to choosing talent from one place. We hand picked the best web innovators and minds to ensure that no matter what the challenge or need – we have an expert ready to lend a hand. Although we are based out of St. John’s Newfoundland, our team reaches into Romania, California, Australia, Vancouver and many places in between.
         p P.S. If you’re passionate about driving results through online innovation, you’re 
@@ -41,3 +31,13 @@ block content
             | We want you to 
             a(href='/contact') partner with us
             | .
+      aside
+        ul.nav-sub
+          li
+            a(href='/company') Company
+          li.current-page
+            a(href='/team') Team
+          li
+            a(href='/jobs') Jobs
+          li
+            a(href='/contact') Contact

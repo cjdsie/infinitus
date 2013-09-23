@@ -27,12 +27,16 @@ html
       div.cbp-af-inner
         a(href="/")
           h1.logo Infinitus Marketing &amp; Technology
-        nav#nav(role='navigation')
+        nav.right#nav(role='navigation')
           ul
+            li.current
+              a(href="#") Menu
             li
               a(href="/company") Company
             li
-              a(href="/work") Services
+              a(href="/work") Work
+            li
+              a(href="/services") Services
             li
               a(href="/blog") Thoughts
             li
@@ -93,5 +97,6 @@ html
     script(src='javascripts/vendor/jquery.animate-enhanced.min.js')
     script(src='javascripts/vendor/hammer.min.js')
     script(src='javascripts/vendor/jquery.superslides.min.js')
+    script(src='javascripts/vendor/flowtype.js')
     script(src='javascripts/script.js')
     script(src='javascripts/helper.js')

@@ -3,6 +3,25 @@ extends layout
 block content
   main.main(role='main')
     .container
+      section
+        h2 Let's start talking
+        p.leader.center Are you ready to become the leader in your market?
+        p Coffee, tea, steaks or cheesecake - we love food and we love to talk business.
+        p We work with clients who are passionate and set big goals. If that’s you, let’s connect:
+        div.contactform
+          form(action='/contact', name='contactus', id='contactus', method='post')
+            p
+              label(for='name') Name: 
+              input(name='name', type='text', value='', id='name')
+            p
+              label(for='email') Email: 
+              input(name='email', type='text', value='', id='email')
+            p
+              label(for='message') Message:
+              textarea(name='message', cols='40', rows='10', id='message')
+            p
+              input(name='submit', type='submit', value='Send', id='submit')
+          include messages
       aside
         ul.nav-sub
           li

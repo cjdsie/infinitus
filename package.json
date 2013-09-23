@@ -1,5 +1,5 @@
 {
-  "name": "application-name",
+  "name": "infinitus-site-v1",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -8,6 +8,7 @@
   "dependencies": {
     "express": "3.3.5",
     "jade": "*",
-    "poet": "*"
+    "poet": "*",
+    "nodemailer": "0.5.2"
   }
 }

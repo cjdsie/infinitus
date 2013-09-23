@@ -61,17 +61,18 @@ body:after {
 .slidecaption h1 {
   color: #fff;
   margin-bottom: 0;
-  font-size: 3em;
+  font-size: 4em;
   line-height: 1;
   margin: 0;
-  text-shadow: 0 0px 20px rgba(0,0,0,0.2);
+  text-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.2);
 }
 .slidecaption h3 {
   font-family: "chaparral-pro", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 1.375em;
   text-transform: none;
   color: #edece4;
-  text-shadow: 0 0px 20px rgba(0,0,0,0.2);
+  text-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.5);
 }
 .slidecaption p {
   margin-top: 6%;
@@ -107,7 +108,7 @@ body:after {
   width: 100%;
 }
 .slides-pagination a {
-  border: 2px solid #222;
+  border: 2px solid #fff;
   border-radius: 15px;
   width: 10px;
   height: 10px;
@@ -122,5 +123,21 @@ body:after {
   text-indent: -100%;
 }
 .slides-pagination a.current {
-  background: #222;
+  background: #fff;
+}
+@media screen and (max-width: 55em) {
+  .slidecaption {
+    position: relative;
+    display: block;
+    width: 80%;
+    max-width: 500px;
+    left: 0;
+    top: 25%;
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  .slides-navigation a {
+    opacity: 0.4;
+  }
 }

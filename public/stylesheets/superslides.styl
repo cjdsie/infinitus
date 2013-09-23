@@ -43,16 +43,17 @@
   h1
     color $white
     margin-bottom 0
-    font-size 3em
+    font-size 4em
     line-height 1
     margin 0
-    text-shadow 0 0px 20px rgba(0, 0, 0, .2)
+    text-shadow 0.1em 0.1em 0.2em rgba(0, 0, 0, .2)
   h3
     font-family $font
-    font-weight 500
+    font-weight $semi-bold
+    font-size em(22)
     text-transform none
     color $offwhite
-    text-shadow 0 0px 20px rgba(0, 0, 0, .2)
+    text-shadow 0.1em 0.1em 0.2em rgba(0, 0, 0, .5)
   p
     margin-top 6%
   a
@@ -84,7 +85,7 @@
   text-align center
   width 100%
   a
-    border 2px solid #222
+    border 2px solid #fff
     border-radius 15px
     width 10px
     height 10px
@@ -98,4 +99,19 @@
     overflow hidden
     text-indent -100%
     &.current
-      background #222
+      background #fff
+
+@media screen and (max-width: 55em)
+  .slidecaption
+    position relative
+    display block
+    width 80%
+    max-width 500px
+    left 0
+    top 25%
+    margin 0 auto
+    padding 10px 20px
+    text-align center
+  .slides-navigation a
+    opacity .4
+

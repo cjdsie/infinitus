@@ -34,9 +34,10 @@
 
  $('#slides').superslides({
     slide_easing: 'easeInOutCubic',
+    play: 8000,
     slide_speed: 800,
-    pagination: false,
-    hashchange: true,
+    pagination: true,
+    hashchange: false,
     scrollable: true
   });
 
@@ -76,14 +77,6 @@ var cbpAnimatedHeader = (function() {
     init();
  
 })();
-
-$('#nav').onePageNav({
-	currentClass: 'current',
-	changeHash: true,
-	scrollThreshold: 0.5,
-	scrollSpeed: 650,
-	easing: 'linear',
-});
 
 
 

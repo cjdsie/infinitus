@@ -3,16 +3,6 @@ extends layout
 block content
   main.main(role='main')
     .container
-      aside
-        ul.nav-sub
-          li.current-page
-            a(href='/company') Company
-          li
-            a(href='/team') Team
-          li
-            a(href='/jobs') Jobs
-          li
-            a(href='/contact') Contact
       section
         h2 We don’t want to work with you. 
         p.leader.center That is, unless you’re ready to let go of 
@@ -26,13 +16,38 @@ block content
         article 
           h3.center We want to work with business owners who believe:
           ul
-            li Changing the world through your business is a lifestyle.
-            li Effort alone doesn’t produce results. You have to be going in the right direction. 
-            li Learning is good. Common sense is gold. 
-            li You can’t be an expert in everything. Great success depends on working with other leaders.
-            li Limits are just excuses. You can’t achieve greatness by doing the things you’ve always done.
+            li
+              img(src='/images/change.png') 
+              h4 Change is Good
+              p Changing the world through your business is a lifestyle.
+            li
+              img(src='/images/lightbulb.png')
+              h4 Forward thinking
+              p Effort alone doesn’t produce results. You have to be going in the right direction. 
+            li
+              img(src='/images/openmind.png') 
+              h4 Open Minded
+              p Learning is good. Common sense is gold. 
+            li
+              img(src='/images/leaders.png') 
+              h4 Want to lead
+              p You can’t be an expert in everything. Great success depends on working with other leaders.
+            li
+              img(src='/images/limitless.png') 
+              h4 Limits are just excuses. 
+              p You can’t achieve greatness by doing the things you’ve always done.
         .partnered
           p.leader.center Does this resonate?
             | We want you to 
             a(href='/contact') partner with us
-            | . 	
+            | .
+      aside
+        ul.nav-sub
+          li.current-page
+            a(href='/company') Company
+          li
+            a(href='/team') Team
+          li
+            a(href='/jobs') Jobs
+          li
+            a(href='/contact') Contact 	
