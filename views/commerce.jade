@@ -2,6 +2,28 @@ extends layout
 
 block content
   main.main(role='main')
+    section.otherservices
+      ul
+        li
+          a(href='/immersive')
+            img(src="/images/immersive.png")
+            .dot
+        li
+          a(href='/interactive')
+            img(src="/images/success.png")
+            .dot
+        li.next
+          a(href='/mobile')
+            img(src="/images/mobile.png")
+            .dot
+        li.active
+          a(href='/commerce')
+            img(src="/images/commerce.png")
+            .dot.active
+        li.next
+          a(href='/consulting')
+            img(src="/images/consult.png")
+            .dot
     .container
       section.services
         h2 eCommerce Websites
@@ -42,9 +64,3 @@ block content
           | We want you to 
           a(href='/contact') partner with us
           | .
-      .partnered
-        h3.center Related Case Studies
-        ul
-          li
-          li
-          li

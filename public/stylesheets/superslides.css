@@ -52,27 +52,27 @@ body:after {
   position: relative;
   display: block;
   width: 100%;
-  max-width: 500px;
+  max-width: 580px;
   left: 90px;
   top: 33%;
   padding: 10px 20px;
-  color: #111;
+  color: #323232;
 }
 .slidecaption h1 {
-  color: #fff;
+  color: inherit;
   margin-bottom: 0;
-  font-size: 4em;
+  font-size: 3.125em;
   line-height: 1;
-  margin: 0;
-  text-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.2);
+  margin: 0 0 3%;
+  font-weight: 400;
 }
 .slidecaption h3 {
-  font-family: "chaparral-pro", sans-serif;
+  font-family: $font-headline;
   font-weight: 400;
   font-size: 1.375em;
+  width: 80%;
   text-transform: none;
-  color: #edece4;
-  text-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.5);
+  color: inherit;
 }
 .slidecaption p {
   margin-top: 6%;
@@ -99,6 +99,9 @@ body:after {
   color: #fff;
   border: 2px solid #db612e;
   background-color: rgba(0,0,0,0.6);
+}
+.slidecaption.light {
+  color: #fff;
 }
 .slides-pagination {
   position: absolute;

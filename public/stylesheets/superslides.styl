@@ -35,25 +35,25 @@
   position relative
   display block
   width 100%
-  max-width 500px
+  max-width 580px
   left 90px
   top 33%
   padding 10px 20px
-  color #111
+  color #323232
   h1
-    color $white
+    color inherit
     margin-bottom 0
-    font-size 4em
+    font-size em(50)
     line-height 1
-    margin 0
-    text-shadow 0.1em 0.1em 0.2em rgba(0, 0, 0, .2)
+    margin 0 0 3%
+    font-weight $semi-bold
   h3
-    font-family $font
+    font-family $font-headline
     font-weight $semi-bold
     font-size em(22)
+    width 80%
     text-transform none
-    color $offwhite
-    text-shadow 0.1em 0.1em 0.2em rgba(0, 0, 0, .5)
+    color inherit
   p
     margin-top 6%
   a
@@ -77,6 +77,8 @@
       color #fff
       border 2px solid $darkorange
       background-color rgba(0,0,0,0.60)
+  &.light
+    color #fff
 
 .slides-pagination
   position absolute

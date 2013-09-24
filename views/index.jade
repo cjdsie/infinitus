@@ -4,25 +4,26 @@ block content
   #slides
     ul.slides-container
         li
-          img(src='images/grandfallswindsor.jpg', alt='Hiking Trail in Grand Falls - Windsor')
-          .slidecaption
+          img(src='images/windsor.jpg', alt='Hiking Trail in Grand Falls - Windsor')
+          .slidecaption.light
             h1.animated.fadeIn.delay03 Town’s Best Foot Forward
-            h3.animated.fadeIn.delay03 New town of Grand Falls - Windsor’s website attracts tourism, residents and business
+            h3.animated.fadeIn.delay03 New town of Grand Falls - Windsor’s website attracts tourism, residents and business.
             p.animated.fadeIn.delay05
-              a(href="") Discover More
+              a(href="/town-of-grand-falls-windsor") Discover More
         li
           img(src='images/marble.jpg', alt='Marble Mountain Ski Lift')
-          .slidecaption
+          .slidecaption.light
             h1.animated.fadeIn.delay03 Big Ideas for Big Results
             h3.animated.fadeIn.delay03 Online presence to match Marble Mountain Ski Resort’s ambitious business goals.
             p.animated.fadeIn.delay05
-              a(href="") Discover More 
+              a(href="/marble-mountain-resort") Discover More 
         li
-          img(src='images/cinelli-front.jpeg', alt='')
-          .slidecaption
-            h1.animated.fadeIn.delay03 Award Winning Work
+          img(src='images/award.jpg', alt='Award-winning Work')
+          .slidecaption.light
+            h1.animated.fadeIn.delay03 Current Work
+            h3.animated.fadeIn.delay03 Through our partnerships with our clients we are able to create work that stands out. 
             p.animated.fadeIn.delay05
-              a(href="/work") Discover More
+              a(href="/work") View Our Work
 
   main.content(role="main")
     div.container
@@ -48,9 +49,9 @@ block content
           h3 Our Work
           p We call many of our clients friends and are honored to contribute to their success. Will you be our next success story?
           p
-            a(href='/company') See More
+            a(href='/work') See More
       section.latestblogs
-        h2 The Latest From The Blog
+        h3 The Latest From The Blog
         - var posts = getPosts(0,5)
         - var page  = 3
         - each post in posts

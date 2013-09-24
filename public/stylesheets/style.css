@@ -39,9 +39,9 @@ body {
   font-weight: 300;
   font-style: normal;
   font-size: 18px;
-  font-size: 1.125em;
+  font-size: 1.25em;
   line-height: 26px;
-  line-height: 1.5;
+  line-height: 1.6128;
   -webkit-font-smoothing: antialiased;
 /* Fix for webkit rendering */
   -webkit-text-size-adjust: 100%;
@@ -82,6 +82,9 @@ img {
 }
 svg:not(:root) {
   overflow: hidden;
+}
+ul {
+  padding: 0;
 }
 /* ============================================================
 	Helpers
@@ -171,6 +174,7 @@ h6 {
   margin: 0;
   color: #9fbb58;
   font-size: inherit;
+  line-height: 1.2;
 }
 h1 a,
 h2 a,
@@ -396,7 +400,7 @@ p.leader {
 }
 .header_nav.header_nav-shrink nav {
   float: left;
-  width: 60%;
+  width: 65%;
   text-align: left;
 }
 .header_nav.header_nav-shrink nav ul li {
@@ -425,6 +429,7 @@ p.leader {
 @media screen and (max-width: 75em) {
   .header_nav.header_nav-shrink nav {
     width: 80%;
+    font-size: 0.875em;
   }
 }
 @media screen and (max-width: 58em) {
@@ -432,7 +437,10 @@ p.leader {
     width: 70%;
   }
   .header_nav.header_nav-shrink nav {
-    width: 90%;
+    font-size: 0.875em;
+  }
+  h1 {
+    line-height: 75px;
   }
 }
 @media screen and (max-width: 55em) {
@@ -455,6 +463,9 @@ p.leader {
   }
   .header_nav.header_nav-shrink h1 {
     font-size: 2em;
+    width: 12%;
+    line-height: 75px;
+    margin-top: 2%;
   }
   .header_nav.header_nav-shrink nav li a {
     font-size: 0.75em;
@@ -480,7 +491,7 @@ p.leader {
     padding: 0 18px;
   }
   .header_nav.header_nav-shrink nav ul li {
-    width: 15.25%;
+    width: 17.25%;
   }
 }
 @media screen and (max-width: 45em) {
@@ -590,11 +601,11 @@ p.leader {
 	Content
 ============================================================ */
 .main {
-  padding-top: 8%;
+  padding-top: 6%;
 }
 @media (max-width: 50em) {
   .main {
-    padding-top: 20%;
+    padding-top: 12%;
   }
 }
 /* Home Page */
@@ -680,6 +691,36 @@ p.leader {
   font-weight: 700;
 }
 /* Homepage Blog Callouts */
+section.blogpage {
+  position: relative;
+  display: block;
+  float: none;
+  width: 100%;
+  margin: 0 auto 5%;
+}
+section.blogpage article {
+  margin: 0 auto;
+  width: 65%;
+}
+@media (max-width: 40em) {
+  section.blogpage article {
+    width: 100%;
+  }
+}
+section.blogpage header {
+  margin: 0;
+  text-align: center;
+}
+section.blogpage .date {
+  color: #999;
+}
+section.blogpage a[title*='Read more'] {
+  display: none;
+  text-align: center;
+  margin: 0 auto;
+  float: none;
+  position: relative;
+}
 .latestblogs {
   *zoom: 1;
   display: block;
@@ -697,10 +738,8 @@ p.leader {
 .latestblogs:after {
   clear: both;
 }
-.latestblogs h2 {
-  margin-bottom: 3%;
-}
-.latestblogs .post {
+.latestblogs .blogpage {
+  width: auto;
   display: inline;
   float: left;
   overflow: hidden;
@@ -710,7 +749,7 @@ p.leader {
   *margin: 0 1.0416666666666665% -correction;
 }
 @media (max-width: 50em) {
-  .latestblogs .post {
+  .latestblogs .blogpage {
     display: inline;
     float: left;
     overflow: hidden;
@@ -722,18 +761,29 @@ p.leader {
     padding-top: 8%;
     border-bottom: 1px solid #dce0d9;
   }
-  .latestblogs .post:last-of-type {
+  .latestblogs .blogpage:last-of-type {
     border-bottom: none;
   }
 }
-.latestblogs .post h4 {
-  text-transform: none;
-  font-weight: 700;
+.latestblogs h3 {
+  margin: 3% 0;
+  text-align: center;
 }
-.latestblogs .post h4 a {
+.latestblogs .post {
+  width: 100%;
+}
+.latestblogs .post h2 {
   text-transform: none;
-  font-weight: 700;
+  font-weight: inherit;
+  font-size: 1.5em;
+}
+.latestblogs .post h2 a {
+  text-transform: none;
+  font-weight: inherit;
   color: #5d6266;
+}
+.latestblogs .post h2 a:hover {
+  color: #db612e;
 }
 .latestblogs .post .date {
   font-size: 0.75em;
@@ -795,7 +845,7 @@ aside {
 .nav-sub a {
   padding: 5px 10px;
   display: block;
-  font-size: 1.125em;
+  font-size: 1em;
   font-weight: 500;
   color: #7d8389;
   text-align: left;
@@ -809,7 +859,7 @@ aside {
 }
 .current-page a,
 .nav-sub a:hover {
-  color: #8fc743;
+  color: #db612e;
   -webkit-transition: color 0.3s linear;
   -moz-transition: color 0.3s linear;
   -o-transition: color 0.3s linear;
@@ -868,7 +918,6 @@ section p.leader {
   color: #5d6266;
   margin-bottom: 5%;
   line-height: 1.2;
-  border-bottom: 1px solid #dce0d9;
   padding-bottom: 3%;
   display: block;
   position: relative;
@@ -952,27 +1001,34 @@ section ul li p {
 }
 section ul.team {
   margin-top: 3%;
+  display: block;
+  width: 102.08333333333333%;
+  margin: 0 -1.0416666666666665%;
+  *width: 102.08333333333333% -correction;
+  *margin: 0 -1.0416666666666665% -correction;
 }
 section ul.team li {
   display: inline;
   float: left;
   overflow: hidden;
-  width: 39.58333333333333%;
+  width: 31.25%;
   margin: 0 1.0416666666666665%;
-  *width: 39.58333333333333% -correction;
+  *width: 31.25% -correction;
   *margin: 0 1.0416666666666665% -correction;
   background: #fff;
-  padding: 2%;
-  border-radius: 3px;
-  border: 1px solid #dce0d9;
+  padding: 2% 0;
+  margin-top: 3%;
+  min-height: 100%;
 }
 section ul.team li h4 {
   color: #222;
   text-transform: none;
+  margin-bottom: 5%;
 }
 section ul.team li h4 span {
   display: block;
   color: #9fbb58;
+  font-weight: 400;
 }
 section .partnered {
   width: 100%;
@@ -980,6 +1036,96 @@ section .partnered {
   background: transparent;
   text-align: center;
   border-top: 1px solid #dce0d9;
+}
+section.otherservices {
+  position: relative;
+  display: block;
+  float: none;
+  width: 100%;
+  border-bottom: 1px solid #bbb;
+  margin: 1.5% auto 3%;
+  overflow: visible;
+}
+@media (max-width: 70em) {
+  section.otherservices {
+    margin-top: 5%;
+  }
+}
+@media (max-width:45em) {
+  section.otherservices {
+    display: none;
+  }
+}
+section.otherservices ul {
+  width: 60%;
+  margin: 0 auto -5px;
+}
+section.otherservices ul li {
+  *zoom: 1;
+  display: inline;
+  float: left;
+  overflow: hidden;
+  width: 17.916666666666668%;
+  margin: 0 1.0416666666666665%;
+  *width: 17.916666666666668% -correction;
+  *margin: 0 1.0416666666666665% -correction;
+  min-height: 100%;
+  padding: 0;
+  overflow: visible;
+}
+section.otherservices ul li:before,
+section.otherservices ul li:after {
+  content: "";
+  display: table;
+}
+section.otherservices ul li:after {
+  clear: both;
+}
+section.otherservices ul li a {
+  position: relative;
+  display: block;
+  float: left;
+}
+section.otherservices ul li a img {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.1;
+  width: 100%;
+}
+section.otherservices ul li a .dot {
+  background: #c9c9c9;
+  font-size: 80px;
+  line-height: 80px;
+  width: 10px;
+  height: 10px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -o-border-radius: 20px;
+  -moz-border-radius: 20px;
+  float: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin: 10px auto 0;
+  padding: 0;
+}
+section.otherservices ul li a .dot.active {
+  background: #db612e;
+}
+section.otherservices ul li a:hover img {
+  opacity: 1;
+}
+section.otherservices ul li.active a img {
+  opacity: 1;
+}
+section.otherservices ul li.next a img {
+  opacity: 0.5;
+}
+section.otherservices ul li.next:hover img {
+  opacity: 1;
 }
 section.services {
   position: relative;
@@ -1056,6 +1202,16 @@ section.services .leftcontent {
     width: 100%;
   }
 }
+section.services .leftcontent p {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 40em) {
+  section.services .leftcontent p {
+    width: 100%;
+  }
+}
 section.services .leftcontent h3.center {
   margin: 5% auto;
 }
@@ -1064,6 +1220,7 @@ section.services .leftcontent ul li {
   border-radius: 2px;
   padding-top: 2%;
   margin-bottom: 4%;
+  min-height: 100%;
 }
 @media (max-width: 40em) {
   section.services .leftcontent ul li {
@@ -1079,6 +1236,35 @@ section.services .leftcontent ul li img {
 @media (max-width: 40em) {
   section.services .leftcontent ul li img {
     width: 80%;
+  }
+}
+section.services .leftcontent ul li .center {
+  width: 80%;
+}
+@media (max-width: 82em) {
+  section.services .leftcontent ul li .center {
+    width: 90%;
+    font-size: 0.875em;
+  }
+}
+@media (max-width: 70em) {
+  section.services .leftcontent ul li .center {
+    font-size: 0.75em;
+  }
+}
+@media (max-width: 65em) {
+  section.services .leftcontent ul li .center {
+    font-size: 0.725em;
+  }
+}
+@media (max-width: 55em) {
+  section.services .leftcontent ul li .center {
+    font-size: 0.625em;
+  }
+}
+@media (max-width: 45em) {
+  section.services .leftcontent ul li .center {
+    font-size: 1.125em;
   }
 }
 .whatwedo {
@@ -1162,6 +1348,7 @@ section.services .leftcontent ul li img {
 article.worklist ul li a {
   display: block;
   position: relative;
+  border: 6px solid rgba(0,0,0,0.04);
 }
 article.worklist ul li a img {
   margin-bottom: 0;
@@ -1189,7 +1376,7 @@ article.worklist ul li a .title h4 {
   color: #fff;
   position: absolute;
   width: 100%;
-  top: 35%;
+  top: 40%;
   text-align: center;
 }
 article.worklist ul li a:hover .title {
@@ -1197,6 +1384,32 @@ article.worklist ul li a:hover .title {
   -webkit-transform: opacity;
   -webkit-transition-timing-function: ease-out;
   -webkit-transition-duration: 500ms;
+}
+.case-studies {
+  padding-top: 0;
+}
+.image-header {
+  width: 100%;
+  max-height: 500px;
+  height: 100%;
+  overflow: hidden;
+  margin-bottom: 3%;
+}
+@media (max-width: 60em) {
+  .image-header {
+    max-height: 400px;
+  }
+}
+.image-header img {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: -100px;
+}
+@media (max-width: 60em) {
+  .image-header img {
+    top: 0px;
+  }
 }
 section.work {
   position: relative;
@@ -1206,7 +1419,7 @@ section.work {
   margin: 0 auto 5%;
 }
 section.work h2 {
-  margin-bottom: 5%;
+  margin-bottom: 1%;
 }
 section.work img {
   margin-bottom: 5%;
