@@ -79,6 +79,12 @@ body:after {
   text-transform: none;
   color: inherit;
 }
+@media (max-width: 60em) {
+  .slidecaption h3 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 @media (max-width: 40em) {
   .slidecaption h3 {
     font-size: 1em;

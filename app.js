@@ -101,7 +101,7 @@ app.get('/blog', function(req, res){
 });
 
 app.get('/access', function(req, res){
-  res.render('acess', {
+  res.render('access', {
     title: 'Infinitus Marketing + Technology | Accessiblity',
     description: 'Infinitus Marketing + Technology is a Newfoundland Web Development Marketing Agency. We offer custom, strategic web design and production services, SEO, social media marketing, and mobile marketing solutions to clients in Newfoundland, Canada, and globally.',
     keywords: 'interactive marketing agency, web design, strategy, seo, social media marketing, mobile marketing, newfoundland'

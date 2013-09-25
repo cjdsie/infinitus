@@ -4,21 +4,21 @@ block content
   #slides
     ul.slides-container
         li
-          img.lazy(src="/images/windsor.jpg")
+          img.lazy(src="/images/windsor.jpg", title='Town of Grand Falls-Windsor')
           .slidecaption.light
             h1.animated.fadeIn.delay03 Town’s Best Foot Forward
             h3.animated.fadeIn.delay03 Town of Grand Falls-Windsor's new website attracts tourism, residents and business.
             p.animated.fadeIn.delay05
               a(href="/town-of-grand-falls-windsor") Discover More
         li
-          img.lazy(src="/images/marble.jpg")
+          img.lazy(src="/images/marble.jpg", title='Marble Mountain Ski Resort')
           .slidecaption.light
             h1.animated.fadeIn.delay03 Big Ideas for Big Results
             h3.animated.fadeIn.delay03 We created an online presence to match Marble Mountain Ski Resort’s ambitious business goals.
             p.animated.fadeIn.delay05
               a(href="/marble-mountain-resort") Discover More 
         li
-          img.lazy(src="/images/award.jpg")
+          img.lazy(src="/images/award.jpg", title='Our Work')
           .slidecaption.light
             h1.animated.fadeIn.delay03 Our Work
             h3.animated.fadeIn.delay03 We partner with our clients to create work that stands out and gets results. 
@@ -39,17 +39,17 @@ block content
             b INFINITUS 
             | means limitless in Latin. In today’s world, change is inevitable. When you team with online marketing experts who are on the forefront of this change, your potential for growth is limitless.
           p
-            a(href='/company') Read More
+            a(href='/company', title='Find out more about the company') Read More
         div.one-third
           h3 What We Do
           p We’ll transform your online marketing so you become a market leader. We don’t just design and build websites; we create powerful online strategies and integrated digital campaigns.
           p
-            a(href='/services') Read More
+            a(href='/services', title='Learn More about our services') Read More
         div.one-third
           h3 Our Work
           p We call many of our clients friends and are honored to contribute to their success. Will you be our next success story?
           p
-            a(href='/work') See More
+            a(href='/work', title='See More work') See More
       section.latestblogs
         h3 The Latest From The Blog
         - var posts = getPosts(0,3)

@@ -618,7 +618,6 @@ p.leader {
   .header_nav nav {
     float: right;
     margin-right: 6%;
-    background: #fff;
   }
   .header_nav.header_nav-shrink h1 {
     margin-top: 4%;
@@ -1190,7 +1189,7 @@ section.services {
   display: block;
   float: none;
   width: 100%;
-  margin: 10% auto 5%;
+  margin: 0% auto 5%;
 }
 section.services .center {
   width: 80%;
@@ -1637,6 +1636,9 @@ section.work aside a.button:hover {
   color: #db612e;
   border: 2px solid #db612e;
   background-color: #fff;
+}
+.styleguide article {
+  margin-top: 0;
 }
 /* ============================================================
 	Contact Form
