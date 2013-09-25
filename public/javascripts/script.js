@@ -79,6 +79,9 @@ var cbpAnimatedHeader = (function() {
 })();
 
 
+$("img.lazy").lazyload({ threshold : 200 });
+
+
 
 $(function() {
   $('#slides').superslides({
