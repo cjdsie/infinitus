@@ -86,7 +86,6 @@ $("img.lazy").lazyload({ threshold : 200 });
 $(function() {
   $('#slides').superslides({
     hashchange: true,
-    animation: slide,
     play: 2000
   });
   $('#slides').on('mouseenter', function() {

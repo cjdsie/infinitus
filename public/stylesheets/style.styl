@@ -394,6 +394,7 @@ p.leader
 @media screen and (max-width: 55em)
   .header_nav
     background transparent
+    overflow hidden
     .cbp-af-inner
       width 100%
     h1
@@ -445,6 +446,7 @@ p.leader
 
 @media screen and (max-width: 40em)
   .header_nav, .header_nav.header_nav-shrink
+    overflow visible
     h1
       width 25%
       margin-top 2%
@@ -474,7 +476,7 @@ p.leader
             display block
             margin 5px 0 5px
           .current
-            background url('../images/icon-check.png') no-repeat 10px 7px
+            background $white url('../images/icon-check.png') no-repeat 10px 7px
         li
           display none
           margin 0

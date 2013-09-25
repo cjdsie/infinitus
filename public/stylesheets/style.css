@@ -471,6 +471,7 @@ p.leader {
 @media screen and (max-width: 55em) {
   .header_nav {
     background: transparent;
+    overflow: hidden;
   }
   .header_nav .cbp-af-inner {
     width: 100%;
@@ -524,6 +525,10 @@ p.leader {
   }
 }
 @media screen and (max-width: 40em) {
+  .header_nav,
+  .header_nav.header_nav-shrink {
+    overflow: visible;
+  }
   .header_nav h1,
   .header_nav.header_nav-shrink h1 {
     width: 25%;
@@ -564,7 +569,7 @@ p.leader {
   }
   .header_nav nav ul:hover .current,
   .header_nav.header_nav-shrink nav ul:hover .current {
-    background: url("../images/icon-check.png") no-repeat 10px 7px;
+    background: #fff url("../images/icon-check.png") no-repeat 10px 7px;
   }
   .header_nav nav ul li,
   .header_nav.header_nav-shrink nav ul li {
