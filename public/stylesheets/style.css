@@ -450,6 +450,20 @@ p.leader {
     width: 80%;
   }
 }
+@media screen and (max-width: 65em) {
+  .header_nav.header_nav-shrink nav {
+    width: 90%;
+  }
+}
+@media (max-width: 60em) {
+  .header_nav.header_nav-shrink nav {
+    width: 75%;
+  }
+  .header_nav.header_nav-shrink nav ul li {
+    width: 14.25%;
+    padding: 0 10px;
+  }
+}
 @media screen and (max-width: 58em) {
   .header_nav nav {
     width: 70%;
@@ -480,7 +494,7 @@ p.leader {
     margin-top: 2%;
   }
   .header_nav.header_nav-shrink nav li a {
-    font-size: 0.75em;
+    font-size: 0.625em;
   }
   .header_nav h1,
   .header_nav nav {
@@ -531,7 +545,6 @@ p.leader {
     float: left;
     width: 40%;
     margin-left: 15%;
-    z-index: 100000;
   }
   .header_nav nav ul,
   .header_nav.header_nav-shrink nav ul {
@@ -542,10 +555,8 @@ p.leader {
     position: absolute;
     top: 0;
     left: 0;
-    border: solid 1px #aaa;
     background: #fff url("../images/icon-menu.png") no-repeat 10px 11px;
     border-radius: 5px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
     font-size: 100%;
   }
   .header_nav nav ul:hover,
@@ -584,7 +595,7 @@ p.leader {
     padding: 5px 5px 5px 32px;
     text-align: left;
     line-height: 20px;
-    font-size: 0.875em;
+    font-size: 1em;
     position: relative;
     width: 100%;
   }
@@ -1189,7 +1200,12 @@ section.services {
   display: block;
   float: none;
   width: 100%;
-  margin: 0% auto 5%;
+  margin: 0 auto 5%;
+}
+@media (max-width:40em) {
+  section.services {
+    margin-top: 5%;
+  }
 }
 section.services .center {
   width: 80%;
