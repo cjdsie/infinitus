@@ -455,9 +455,6 @@ p.leader {
   .header_nav nav {
     width: 70%;
   }
-  .header_nav.header_nav-shrink nav {
-    font-size: 0.875em;
-  }
 }
 @media screen and (max-width: 55em) {
   .header_nav {
@@ -617,12 +614,14 @@ p.leader {
 }
 @media (max-width:30em) {
   .header_nav nav {
-    font-size: 0.875em;
     float: right;
     margin-right: 6%;
   }
   .header_nav.header_nav-shrink h1 {
     margin-top: 4%;
+  }
+  .header_nav.header_nav-shrink nav {
+    margin-right: 0;
   }
 }
 /* ============================================================
