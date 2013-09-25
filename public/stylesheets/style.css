@@ -317,6 +317,7 @@ p.leader {
   font-size: 2em;
   margin: 0;
   float: left;
+  position: relative;
 }
 .header_nav nav {
   float: right;
@@ -517,7 +518,7 @@ p.leader {
     position: relative;
     min-height: 40px;
     float: left;
-    width: 60%;
+    width: 55%;
   }
   .header_nav nav ul,
   .header_nav.header_nav-shrink nav ul {
