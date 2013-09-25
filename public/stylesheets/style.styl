@@ -448,9 +448,12 @@ p.leader
       float left
       width 40%
       margin-left 15%
+      z-index 100000
       ul
-        width 180px
+        width 100%
         padding 5px 0
+        display block
+        overflow hidden
         position absolute
         top 0
         left 0
@@ -463,7 +466,7 @@ p.leader
           background-image none
           li
             display block
-            margin 0 0 5px
+            margin 5px 0 5px
           .current
             background url('../images/icon-check.png') no-repeat 10px 7px
         li
@@ -486,9 +489,9 @@ p.leader
             position relative
             width 100%
             &:hover
-              background transparent
+              background $light-orange
               border none 
-              color $light-orange
+              color $white
               margin 0
               padding 5px 5px 5px 32px
           
@@ -510,6 +513,7 @@ p.leader
   .header_nav nav
     float right
     margin-right 6%
+    background $white
     
   .header_nav.header_nav-shrink
     h1

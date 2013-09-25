@@ -448,7 +448,6 @@ p.leader {
 @media screen and (max-width: 75em) {
   .header_nav.header_nav-shrink nav {
     width: 80%;
-    font-size: 0.875em;
   }
 }
 @media screen and (max-width: 58em) {
@@ -532,11 +531,14 @@ p.leader {
     float: left;
     width: 40%;
     margin-left: 15%;
+    z-index: 100000;
   }
   .header_nav nav ul,
   .header_nav.header_nav-shrink nav ul {
-    width: 180px;
+    width: 100%;
     padding: 5px 0;
+    display: block;
+    overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -553,7 +555,7 @@ p.leader {
   .header_nav nav ul:hover li,
   .header_nav.header_nav-shrink nav ul:hover li {
     display: block;
-    margin: 0 0 5px;
+    margin: 5px 0 5px;
   }
   .header_nav nav ul:hover .current,
   .header_nav.header_nav-shrink nav ul:hover .current {
@@ -588,9 +590,9 @@ p.leader {
   }
   .header_nav nav ul li a:hover,
   .header_nav.header_nav-shrink nav ul li a:hover {
-    background: transparent;
+    background: #e46a3f;
     border: none;
-    color: #e46a3f;
+    color: #fff;
     margin: 0;
     padding: 5px 5px 5px 32px;
   }
@@ -616,6 +618,7 @@ p.leader {
   .header_nav nav {
     float: right;
     margin-right: 6%;
+    background: #fff;
   }
   .header_nav.header_nav-shrink h1 {
     margin-top: 4%;
