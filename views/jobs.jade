@@ -8,6 +8,20 @@ block content
         p.leader.center If you have a passion for interactive marketing and are exceptional at what you do, we want to get to know you.
         p We work with people across the world. Our innovators and thinkers love working from home where they have comfort to go beyond the limits of offices, cubicles and other barriers. Plus, who really likes commuting to work?
         p You don’t have to be crazy to work with us, but it helps.
+        div.contactform
+          form(action='/contact', name='contactus', id='contactus', method='post')
+            p
+              label(for='name') Name: 
+              input(name='name', type='text', value='', id='name')
+            p
+              label(for='email') Email: 
+              input(name='email', type='text', value='', id='email')
+            p
+              label(for='message') Message:
+              textarea(name='message', cols='40', rows='10', id='message')
+            p
+              input(name='submit', type='submit', value='Send', id='submit')
+          include messages
       aside
         ul.nav-sub
           li

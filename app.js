@@ -259,6 +259,35 @@ app.post('/contact', function (req, res) {
   });
 });
 
+
+app.post('/jobs', function (req, res) {
+  var mailOpts, smtpTrans;
+  //Setup Nodemailer transport, I chose gmail. Create an application-specific password to avoid problems.
+  smtpTrans = nodemailer.createTransport('SMTP', {
+      auth: {
+          user: "scottoldford@gmail.com",
+          pass: "ngrbhhgcjyfjlxoy" 
+      }
+  });
+  //Mail options
+  mailOpts = {
+      from: req.body.name + ' &lt;' + req.body.email + '&gt;', //grab form data from the request body object
+      to: 'scottoldford@gmail.com',
+      subject: 'Job Inquiry',
+      text: req.body.message
+  };
+  smtpTrans.sendMail(mailOpts, function (error, response) {
+      //Email not sent
+      if (error) {
+          res.render('jobs', { title: 'Infinitus Marketing + Technology | Job Inquiry', msg: 'Error occured, message not sent.', err: true, page: 'jobs' })
+      }
+      //Yay!! Email sent
+      else {
+          res.render('jobs', { title: 'Infinitus Marketing + Technology | Job Inquiry', msg: 'Message sent! Thank you.', err: false, page: 'jobs' })
+      }
+  });
+});
+
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());

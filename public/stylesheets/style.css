@@ -117,6 +117,11 @@ ul {
 .container:after {
   clear: both;
 }
+@media (max-width: 40em) {
+  .container {
+    width: 90%;
+  }
+}
 @media screen and (min-width: 30em) {
   .container {
     padding: 1em 2.5%;
@@ -515,8 +520,8 @@ p.leader {
     position: relative;
     min-height: 40px;
     float: left;
-    width: 50%;
-    margin-left: 8%;
+    width: 40%;
+    margin-left: 15%;
   }
   .header_nav nav ul,
   .header_nav.header_nav-shrink nav ul {
@@ -612,7 +617,7 @@ p.leader {
 }
 @media (max-width: 50em) {
   .main {
-    padding-top: 12%;
+    padding-top: 15%;
   }
 }
 /* Home Page */
@@ -712,11 +717,17 @@ section.blogpage article {
 @media (max-width: 40em) {
   section.blogpage article {
     width: 100%;
+    margin-top: 10%;
   }
 }
 section.blogpage header {
   margin: 0;
   text-align: center;
+}
+@media (max-width: 50em) {
+  section.blogpage header h2 {
+    font-size: 1em;
+  }
 }
 section.blogpage .date {
   color: #999;
@@ -1156,7 +1167,7 @@ section.services {
   display: block;
   float: none;
   width: 100%;
-  margin: 0 auto 5%;
+  margin: 10% auto 5%;
 }
 section.services .center {
   width: 80%;
@@ -1201,7 +1212,9 @@ section.services ul li:after {
     margin: 0 1.0416666666666665%;
     *width: 97.91666666666666% -correction;
     *margin: 0 1.0416666666666665% -correction;
-    margin: 8% 0;
+    margin: 8% 0 0;
+    border-bottom: 0;
+    min-height: 100%;
   }
 }
 section.services ul li img {

@@ -94,6 +94,8 @@ ul
   max-width 100%
   width 85%
   clearfix()
+  @media (max-width: 40em)
+    width 90%
   @media screen and (min-width: 30em)
     padding 1em 2.5%
 
@@ -437,8 +439,8 @@ p.leader
       position relative
       min-height 40px
       float left
-      width 50%
-      margin-left 8%
+      width 40%
+      margin-left 15%
       ul
         width 180px
         padding 5px 0
@@ -511,7 +513,7 @@ p.leader
 .main
   padding-top 6%
   @media (max-width: 50em)
-    padding-top 12%
+    padding-top 15%
 
 /* Home Page */
 
@@ -574,9 +576,13 @@ section.blogpage
     width 65%
     @media (max-width: 40em)
       width 100%
+      margin-top: 10%;
   header
     margin 0
     text-align center
+    h2
+      @media (max-width: 50em)
+        font-size 1em
   .date
     color #999
   a[title*='Read more']
@@ -840,7 +846,7 @@ section.services
   display block
   float none
   width 100%
-  margin 0 auto 5%
+  margin 10% auto 5%
   .center
     width 80%
     @media (max-width: 40em)
@@ -857,7 +863,9 @@ section.services
       position relative
       @media (max-width: 45em)
         column(12)
-        margin 8% 0
+        margin 8% 0 0
+        border-bottom 0
+        min-height 100%
       img
         width 80%
         margin-bottom 8%
