@@ -366,8 +366,6 @@ p.leader
       width 70%
   .header_nav.header_nav-shrink nav
     font-size .875em
-  h1
-    line-height 75px
 
 
 
@@ -439,7 +437,8 @@ p.leader
       position relative
       min-height 40px
       float left
-      width 55%
+      width 50%
+      margin-left 8%
       ul
         width 180px
         padding 5px 0
@@ -450,7 +449,7 @@ p.leader
         background #fff url('../images/icon-menu.png') no-repeat 10px 11px
         border-radius 5px
         box-shadow 0 1px 2px rgba(0,0,0,.3)
-        font-size 90%
+        font-size 100%
         &:hover
           background-image none
           li
@@ -474,7 +473,9 @@ p.leader
             padding 5px 5px 5px 32px
             text-align left
             line-height 20px
-            font-size 0.75em
+            font-size 0.875em
+            position relative
+            width 100%
             &:hover
               background transparent
               border none 
@@ -496,6 +497,12 @@ p.leader
       margin-top 0
       width 35%
       margin-right 0
+
+@media (max-width:30em)
+  .header_nav, .header_nav.header_nav-shrink
+    h1
+      margin-top 4%
+  
 
 
 /* ============================================================
@@ -601,7 +608,7 @@ section.blogpage
     h2
       text-transform none
       font-weight inherit
-      font-size 1.5em
+      font-size 1.2em
       a
         text-transform none
         font-weight inherit
@@ -716,7 +723,7 @@ section
         margin-left 0
       @media (max-width: 40em)
         column(12)
-        padding 12% 0 8%
+        padding 12% 0 0%
         border-bottom 1px solid #dce0d9
         &:last-of-type
           border none
@@ -733,14 +740,18 @@ section
         margin-left auto
         margin-right auto
     &.team
-      margin-top 3%
       row(12)
+      margin-top 5%
       li
         column(4)
         background $white
         padding 2% 0
         margin-top 3%
         min-height 100%
+        @media (max-width:40em)
+          column(12)
+          margin-top 5%
+          border none
         h4
           color $darkergrey
           text-transform none
@@ -749,12 +760,13 @@ section
             display block
             color $green
             font-weight $semi-bold
+            @media(max-width: 60em)
+              font-size .875em
   .partnered
     width 100%
-    margin-top 5%
+    margin-top 3%
     background transparent
     text-align center
-    border-top 1px solid #dce0d9 
 
 section.otherservices
   position relative
@@ -888,15 +900,15 @@ section.services
             width 80%
         .center
           width 80%
-          @media (max-width: 82em)
+          @media (max-width: 85em)
             width 90%
             font-size .875em
           @media (max-width: 70em)
             font-size .75em
-
           @media (max-width: 65em)
-            font-size .725em
+            font-size .625em
           @media (max-width: 55em)
+            width 100%
             font-size .625em
           @media (max-width: 45em)
             font-size em(18)
@@ -1184,12 +1196,12 @@ footer
         display block
         margin-bottom 5%
       span
-        width 18px
-        height 18px
+        width 30px
+        height 30px
         overflow hidden
         display inline-block 
         position relative
-        top 0px
+        top -3px
         margin-right .5em
         
     &.facebook
@@ -1206,12 +1218,12 @@ footer
         text-align left
         margin-bottom 5%
       span
-         width 18px
-         height 18px
+         width 30px
+         height 30px
          overflow hidden
          display inline-block 
          position relative
-         top 0px
+         top -3px
          margin-left .5em
          @media screen and (max-width: 40em)
            float left
@@ -1302,8 +1314,11 @@ footer
 	      &:hover
 	        background-color $darkorange
   .startproject
-    column(6)
-    offset(1.5)
+    column(6.5)
+    offset(1.1)
+    @media (max-width: 80em)
+      column(6.5)
+      offset(.8)
     @media (max-width: 70em)
      column(5)
      offset(1)
@@ -1311,16 +1326,16 @@ footer
       column(12)
       margin-top 5%
     .startintro
-      column(7.5)
+      column(8)
       @media (max-width: 70em)
-        column(5.4)
+        column(12)
       @media screen and (max-width: 50em)
         column(12)
         text-align center
     .contactlist
-      column(4.5)
+      column(4)
       @media (max-width: 70em)
-        column(6.6)
+        column(9)
       @media screen and (max-width: 50em)
         column(12)	
       ul
