@@ -103,24 +103,26 @@ $("img.lazy").lazyload({ threshold : 200 });
 
 
 $(function() {
+	var $slides = $('#slides');
   $('#slides').superslides({
     hashchange: true,
-    play: 2000
+    play: 2000,
+    scrollable: true
   });
-  $('#slides').on('mouseenter', function() {
-        $(this).superslides('stop');
-        console.log('Stopped')
-      });
-  $('#slides').on('mouseleave', function() {
-    $(this).superslides('start');
-    console.log('Started')
-  });
+  //$('#slides').on('mouseenter', function() {
+        //$(this).superslides('stop');
+        //console.log('Stopped')
+      //});
+  //$('#slides').on('mouseleave', function() {
+    //$(this).superslides('start');
+    //console.log('Started')
+  //});
   Hammer($slides[0]).on("swipeleft", function(e) {
-    $slides.data('superslides');
+    $slides.data('superslides').animate('next');
   });
   
   Hammer($slides[0]).on("swiperight", function(e) {
-    $slides.data('superslides');
+    $slides.data('superslides').animate('prev');
   });
 });
 
