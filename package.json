@@ -10,7 +10,7 @@
     "jade": "*",
     "poet": "*",
     "nodemailer": "0.5.2",
-    "pkgcloud": "*",
+    "cloudservers": "*",
     "underscore": "*"
   }
 }

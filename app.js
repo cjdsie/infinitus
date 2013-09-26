@@ -26,78 +26,34 @@ app.use(require('stylus').middleware(__dirname + '/public'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-var pkgcloud = require('pkgcloud'),
-    _ = require('underscore');
+var cloudservers = require('cloudservers'),
+    sys = require('sys');
 
-// create our client with your rackspace credentials
-var client = pkgcloud.providers.rackspace.compute.createClient({
-  username: 'slippy',
-  apiKey:   '0bceca2e1df4dffe1d0b5f755a6c17fd'
-});
+function createServer(serverName, username, apiKey) {
+  var options = {
+    name: serverName,
+    image: 49, // Ubuntu 10.04 (Lucid Lynx)
+    flavor: 1, // 256 server
+  };
 
-// first we're going to get our flavors
-client.getFlavors(function (err, flavors) {
-    if (err) {
-        console.dir(err);
-        return;
-    }
-
-    // then get our base images
-    client.getImages(function (err, images) {
-        if (err) {
-            console.dir(err);
-            return;
-        }
-
-        // Pick a 512MB instance flavor
-        var flavor = _.findWhere(flavors, { name: '512MB Standard Instance' });
-
-        // Pick an image based on Ubuntu 12.04
-        var image = _.findWhere(images, { name: 'Ubuntu 12.04 LTS (Precise Pangolin)' });
-
-        // Create our first server
-        client.createServer({
-            name: 'server1',
-            image: image,
-            flavor: flavor
-        }, handleServerResponse);
-
-        // Create our second server
-        client.createServer({
-            name: 'server2',
-            image: image,
-            flavor: flavor
-        }, handleServerResponse);
+  cloudservers.setAuth({ username: username, apiKey: apiKey }, function () {
+    cloudservers.createServer(options, function (err, server) {
+      server.setWait({ status: 'ACTIVE' }, 5000, function () {
+        // Our server is now built and active, so we can install node.js on it
+        sys.puts('Your server ' + serverName + ' is now ready.');
+        sys.puts('  IP Address: ' + server.addresses.public);
+        sys.puts('  Root password: ' + server.adminPass);
+      });
     });
-});
+  });
+};
 
-// This function will handle our server creation,
-// as well as waiting for the server to come online after we've
-// created it.
-function handleServerResponse(err, server) {
-    if (err) {
-        console.dir(err);
-        return;
-    }
+var args = process.argv.slice(2);
+var serverName = args[0];
+var username = args[1] || 'slippy';
+var apiKey = args[2] || '0bceca2e1df4dffe1d0b5f755a6c17fd';
 
-    console.log('SERVER CREATED: ' + server.name + ', waiting for active status');
-
-    // Wait for status: ACTIVE on our server, and then callback
-    server.setWait({ status: 'ACTIVE' }, 5000, function (err) {
-        if (err) {
-            console.dir(err);
-            return;
-        }
-
-        console.log('SERVER INFO');
-        console.log(server.name);
-        console.log(server.status);
-        console.log(server.id);
-
-        console.log('Make sure you DELETE server: ' + server.id +
-            ' in order to not accrue billing charges');
-    });
-}
+createServer(serverName, username, apiKey);
 
 var Poet = require('poet');
 
