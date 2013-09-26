@@ -104,11 +104,7 @@ $("img.lazy").lazyload({ threshold : 200 });
 
 $(function() {
 	var $slides = $('#slides');
-  $('#slides').superslides({
-    hashchange: true,
-    play: 2000,
-    scrollable: true
-  });
+
   //$('#slides').on('mouseenter', function() {
         //$(this).superslides('stop');
         //console.log('Stopped')
@@ -124,6 +120,12 @@ $(function() {
   Hammer($slides[0]).on("swiperight", function(e) {
     $slides.data('superslides').animate('prev');
   });
+  $('#slides').superslides({
+    hashchange: true,
+    //play: 2000,
+    //scrollable: true
+  });
+
 });
 
 
