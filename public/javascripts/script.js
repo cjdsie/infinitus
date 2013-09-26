@@ -1,5 +1,20 @@
 /* There are three styles of Slideshows you can use. #Slider1 offers the ability to have center buttons underneath the images. #Slider2 offers left and right arrows. And finally #Slider3 is the Kitchen sink. Both centered buttons and nav arrows are used. For Development, please delete the Sliders you don't need.*/
 
+
+// A fix is on the way to get Windows Phone 8 to recognize
+// CSS pixels rather than device pixels (which is preferred behavior).
+// In the meantime, use this javascript before any other script
+// if you need an immediate patch:
+//
+// http://trentwalton.com/2013/01/16/windows-phone-8-viewport-fix/
+if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+  var msViewportStyle = document.createElement("style");
+  msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));
+  document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+}
+;
+
+
 // Slideshow 1
  $("#slider1").responsiveSlides({
    maxwidth: 800,
@@ -77,6 +92,10 @@ var cbpAnimatedHeader = (function() {
     init();
  
 })();
+
+
+// Init responsive-nav.js
+      var nav = responsiveNav("#nav");
 
 
 $("img.lazy").lazyload({ threshold : 200 });

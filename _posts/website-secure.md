@@ -2,7 +2,7 @@
   "title": "Is Your Website Secure?",
   "tags": [],
   "category": "security",
-  "date": "9-25-2013"
+  "date": "9-29-2013"
 }}}
 
 Website security isn’t particularly sexy. It takes time and can be expensive to stay ahead of the Internet’s hackers and shady characters.<!--more--> But, much like paying your car insurance bill every month, an ounce of prevention is better than a pound of regret. 

@@ -2,7 +2,7 @@
   "title": "Why October is Ridiculously Important for B2B and Service Businesses",
   "tags": [],
   "category": "business",
-  "date": "9-25-2013"
+  "date": "9-29-2013"
 }}}
 
 As the leaves are turning color and fall air (and football!) is here, it seems like it was just yesterday we were enjoying the summer heat.<!--more-->  It’s hard to imagine that the holiday season is right around the corner.

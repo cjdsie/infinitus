@@ -231,6 +231,7 @@ p.leader {
   background: tranparent;
   z-index: 10000;
   height: 200px;
+  overflow: hidden;
   -webkit-transition: height 0.3s;
   -moz-transition: height 0.3s;
   transition: height 0.3s;
@@ -266,7 +267,7 @@ p.leader {
     float: left;
     text-indent: -9999px;
     margin-right: 2%;
-    background: transparent url("../images/Infinitus-logo-white.png") no-repeat center;
+    background: transparent url("../images/Infinitus-logo.png") no-repeat center;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
@@ -492,6 +493,9 @@ p.leader {
     line-height: 75px;
     margin-top: 2%;
   }
+  .header_nav.header_nav-shrink nav {
+    width: 85%;
+  }
   .header_nav.header_nav-shrink nav li a {
     font-size: 0.625em;
   }
@@ -511,23 +515,11 @@ p.leader {
     padding: 0 10px;
   }
 }
-@media screen and (max-width:45em) {
-  .header_nav.header_nav-shrink nav {
-    padding: 0 18px;
-  }
-  .header_nav.header_nav-shrink nav ul li {
-    width: 17.25%;
-  }
-}
-@media screen and (max-width: 45em) {
-  .header_nav.header_nav-shrink nav ul li {
-    padding: 0 5px;
-  }
-}
 @media screen and (max-width: 40em) {
   .header_nav,
   .header_nav.header_nav-shrink {
     overflow: visible;
+    height: auto;
   }
   .header_nav h1,
   .header_nav.header_nav-shrink h1 {
@@ -537,103 +529,57 @@ p.leader {
     margin-right: 2%;
     margin-left: 2%;
   }
-  .header_nav nav,
-  .header_nav.header_nav-shrink nav {
-    position: relative;
-    min-height: 40px;
-    float: left;
-    width: 40%;
-    margin-left: 15%;
-  }
-  .header_nav nav ul,
-  .header_nav.header_nav-shrink nav ul {
-    width: 100%;
-    padding: 5px 0;
-    display: block;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #fff url("../images/icon-menu.png") no-repeat 10px 11px;
-    border-radius: 5px;
-    font-size: 100%;
-  }
-  .header_nav nav ul:hover,
-  .header_nav.header_nav-shrink nav ul:hover {
-    background-image: none;
-  }
-  .header_nav nav ul:hover li,
-  .header_nav.header_nav-shrink nav ul:hover li {
-    display: block;
-    margin: 5px 0 5px;
-  }
-  .header_nav nav ul:hover .current,
-  .header_nav.header_nav-shrink nav ul:hover .current {
-    background: #fff url("../images/icon-check.png") no-repeat 10px 7px;
-  }
-  .header_nav nav ul li,
-  .header_nav.header_nav-shrink nav ul li {
-    display: none;
-    margin: 0;
-    width: 100%;
-  }
-  .header_nav nav ul li.current,
-  .header_nav.header_nav-shrink nav ul li.current {
-    display: block;
-  }
-  .header_nav nav ul li.current a,
-  .header_nav.header_nav-shrink nav ul li.current a {
-    background: none;
-    color: #666;
-  }
-  .header_nav nav ul li a,
-  .header_nav.header_nav-shrink nav ul li a {
-    color: #edece4;
-    display: block;
-    margin: 0;
-    padding: 5px 5px 5px 32px;
-    text-align: left;
-    line-height: 20px;
-    font-size: 1em;
-    position: relative;
-    width: 100%;
-  }
-  .header_nav nav ul li a:hover,
-  .header_nav.header_nav-shrink nav ul li a:hover {
-    background: #e46a3f;
-    border: none;
-    color: #fff;
-    margin: 0;
-    padding: 5px 5px 5px 32px;
-  }
-  .header_nav nav.right ul,
-  .header_nav.header_nav-shrink nav.right ul {
-    left: auto;
-    right: 0;
-  }
-  .header_nav nav.center ul,
-  .header_nav.header_nav-shrink nav.center ul {
-    left: 50%;
-    margin-left: -90px;
-  }
   .header_nav {
-    background: transparent;
+    background: #fff;
   }
   .header_nav h1 {
     margin-top: 0;
     margin-right: 0;
   }
+  .nav-toggle {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-select: none;
+    width: 70px;
+    height: 55px;
+    float: right;
+    text-indent: -9999px;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    background: url("../images/hamburger.png") 50% 33% no-repeat transparent;
+    right: 0;
+  }
+  .header_nav nav,
+  .header_nav.header_nav-shrink nav {
+    width: 100%;
+  }
+  .header_nav nav ul li,
+  .header_nav.header_nav-shrink nav ul li {
+    width: 100%;
+    display: block;
+  }
+  .header_nav nav {
+    float: left;
+    background: #fff;
+  }
+  .header_nav nav ul li {
+    height: auto;
+  }
+  .header_nav nav ul li a {
+    color: #e46a3f;
+    line-height: 60px;
+    font-size: 0.625em;
+    font-weight: 500;
+  }
+  .header_nav nav ul li a:hover {
+    background: transparent;
+    border: none;
+    color: #db612e;
+  }
 }
 @media (max-width:30em) {
-  .header_nav nav {
-    float: right;
-    margin-right: 6%;
-  }
   .header_nav.header_nav-shrink h1 {
     margin-top: 4%;
-  }
-  .header_nav.header_nav-shrink nav {
-    margin-right: 0;
   }
 }
 /* ============================================================
@@ -744,7 +690,7 @@ section.blogpage {
 }
 section.blogpage article {
   margin: 0 auto;
-  width: 65%;
+  width: 75%;
 }
 @media (max-width: 40em) {
   section.blogpage article {

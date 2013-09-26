@@ -12,6 +12,7 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     link(rel='stylesheet', href='/stylesheets/normalize.css')
     link(rel='stylesheet', href='/stylesheets/superslides.css')
+    link(rel='stylesheet', href='/stylesheets/responsive-nav.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='apple-touch-icon', href='/images/favicon/favicon-128.png')
     link(rel='icon', href='/images/favicon/favicon.png')
@@ -39,10 +40,8 @@ html
       div.cbp-af-inner
         h1.logo
           a(href="/") Infinitus Marketing &amp; Technology
-        nav.right#nav(role='navigation')
+        nav.nav-collapse#nav(role='navigation')
           ul
-            li.current
-              a(href="#") Menu
             li
               a(href="/company") Company
             li
@@ -110,6 +109,7 @@ html
     script(src='javascripts/vendor/hammer.min.js')
     script(src='javascripts/vendor/jquery.superslides.min.js')
     script(src='javascripts/vendor/jquery.lazyload.min.js')
+    script(src='javascripts/vendor/responsive-nav.min.js')
     script(src='javascripts/script.js')
     script(src='javascripts/helper.js')
     script
