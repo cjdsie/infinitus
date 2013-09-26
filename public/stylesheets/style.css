@@ -261,6 +261,11 @@ p.leader {
   -o-background-size: contain;
   background-size: contain;
 }
+@media (max-width: 70em) {
+  .header_nav h1 {
+    width: 20%;
+  }
+}
 @media (max-width: 40em) {
   .header_nav h1 {
     width: 8%;
@@ -341,6 +346,11 @@ p.leader {
   float: right;
   text-align: center;
   width: 60%;
+}
+@media (max-width: 70em) {
+  .header_nav nav {
+    width: 75%;
+  }
 }
 .header_nav nav ul {
   float: none;
@@ -466,7 +476,7 @@ p.leader {
 }
 @media screen and (max-width: 58em) {
   .header_nav nav {
-    width: 70%;
+    width: 75%;
   }
 }
 @media screen and (max-width: 55em) {
