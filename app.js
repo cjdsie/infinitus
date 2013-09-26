@@ -25,36 +25,6 @@ app.use(app.router);
 app.use(require('stylus').middleware(__dirname + '/public'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-var cloudservers = require('cloudservers'),
-    sys = require('sys');
-
-function createServer(serverName, username, apiKey) {
-  var options = {
-    name: serverName,
-    image: 49, // Ubuntu 10.04 (Lucid Lynx)
-    flavor: 1, // 256 server
-  };
-
-  cloudservers.setAuth({ username: username, apiKey: apiKey }, function () {
-    cloudservers.createServer(options, function (err, server) {
-      server.setWait({ status: 'ACTIVE' }, 5000, function () {
-        // Our server is now built and active, so we can install node.js on it
-        sys.puts('Your server ' + serverName + ' is now ready.');
-        sys.puts('  IP Address: ' + server.addresses.public);
-        sys.puts('  Root password: ' + server.adminPass);
-      });
-    });
-  });
-};
-
-var args = process.argv.slice(2);
-var serverName = args[0];
-var username = args[1] || 'slippy';
-var apiKey = args[2] || '0bceca2e1df4dffe1d0b5f755a6c17fd';
-
-createServer(serverName, username, apiKey);
-
 var Poet = require('poet');
 
 var poet = Poet(app, {
