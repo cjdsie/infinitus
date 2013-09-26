@@ -1341,14 +1341,18 @@ footer
       column(12)
       margin-top 5%
     .startintro
-      column(8)
+      column(7.4)
+      @media (max-width: 75em)
+        column(7)
       @media (max-width: 70em)
         column(12)
       @media screen and (max-width: 50em)
         column(12)
         text-align center
     .contactlist
-      column(4)
+      column(4.6)
+      @media (max-width: 75em)
+        column(5)
       @media (max-width: 70em)
         column(9)
       @media screen and (max-width: 50em)
@@ -1385,11 +1389,16 @@ footer
         margin 0
         width 32%
         float left
-        @media (max-width:50em)
+        @media (max-width: 65em)
+          font-size .875em
+        @media (max-width: 55em)
+          font-size .75em
+        @media (max-width: 50em)
           float none
           width 100%
           text-align center
           margin-bottom 3%
+          font-size 1em
         &.copyright
           margin-left auto
           margin-right auto
@@ -1401,12 +1410,17 @@ footer
         display inline-block
         width 30%
         text-align right
+        @media (max-width: 65em)
+          font-size .875em
+        @media (max-width: 55em)
+          font-size .75em
         @media (max-width: 50em)
           float none
           width 100%
           text-align center
           display block
           padding 0
+          font-size 1em
         li
           display inline-block
           width auto
