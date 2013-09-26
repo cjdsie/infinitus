@@ -1445,6 +1445,9 @@ article.worklist ul li a:hover .title {
   -webkit-transition-timing-function: ease-out;
   -webkit-transition-duration: 500ms;
 }
+article.worklist ul li a:hover .title h4 {
+  top: 40%;
+}
 .case-studies {
   padding-top: 0;
 }
