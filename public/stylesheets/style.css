@@ -1108,6 +1108,7 @@ section.otherservices ul li a {
   position: relative;
   display: block;
   float: left;
+  width: 100%;
 }
 section.otherservices ul li a img {
   -webkit-transition: all 0.2s ease-in-out;
