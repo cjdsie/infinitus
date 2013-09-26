@@ -115,6 +115,13 @@ $(function() {
     $(this).superslides('start');
     console.log('Started')
   });
+  Hammer($slides[0]).on("swipeleft", function(e) {
+    $slides.data('superslides');
+  });
+  
+  Hammer($slides[0]).on("swiperight", function(e) {
+    $slides.data('superslides');
+  });
 });
 
 
