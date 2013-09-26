@@ -1525,6 +1525,33 @@ section.work .case-studycopy {
     margin-top: 10%;
   }
 }
+section.work .case-studycopy blockquote {
+  font-style: italic;
+  position: relative;
+  display: block;
+  height: auto;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 2% 5% 2%;
+  font-weight: 700;
+  border: 1px solid #e3e5e4;
+  border-right: none;
+  border-left: none;
+  background: transparent url("../images/quotes.png") no-repeat 0px 10px;
+}
+section.work .case-studycopy blockquote footer {
+  background: transparent;
+  font-style: normal;
+  color: #aaa;
+  text-indent: -1em;
+  font-weight: 300;
+}
+section.work .case-studycopy blockquote footer cite {
+  font-style: normal;
+}
+section.work .case-studycopy blockquote footer:before {
+  content: "– ";
+}
 section.work aside {
   display: inline;
   float: left;

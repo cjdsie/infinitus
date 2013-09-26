@@ -1041,6 +1041,29 @@ section.work
     @media (max-width: 50em)
       column(12)
       margin-top 10%
+    blockquote
+      font-style italic
+      position relative
+      display block
+      height auto
+      margin-left 0
+      margin-right 0
+      padding 2% 5% 2%
+      font-weight $heavy
+      border 1px solid #E3E5E4
+      border-right none
+      border-left none
+      background transparent url('../images/quotes.png') no-repeat 0px 10px
+      footer
+        background transparent
+        font-style normal
+        color #aaa
+        text-indent -1em
+        font-weight $regular
+        cite
+          font-style normal
+        &:before
+          content "– "
   aside
     column(3)
     display inline-block
