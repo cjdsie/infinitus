@@ -139,11 +139,11 @@ $("img.lazy").lazyload({ threshold : 200 });
 document.ontouchmove = function(e) {
     e.preventDefault();
   };
-  $('#slides').hammer().on('swipeleft', function() {
+  $('#slides').Hammer().on('swipeleft', function() {
     $(this).superslides('animate', 'next');
   });
 
-  $('#slides').hammer().on('swiperight', function() {
+  $('#slides').Hammer().on('swiperight', function() {
     $(this).superslides('animate', 'prev');
   });
 
